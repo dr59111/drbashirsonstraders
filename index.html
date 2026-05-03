@@ -1,11 +1,567 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dr Bashir Son's Traders</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Bashir Son's Traders | Premium Poultry Medicines & Business Solutions</title>
+  <meta name="description" content="Dr Bashir Son's Traders provides premium poultry medicines and business solutions for import, distribution, and export buyers from Pakistan.">
+  <meta name="keywords" content="Dr Bashir Son's Traders, poultry medicines Pakistan, veterinary products exporter, poultry health supplier, livestock medicines Pakistan">
+  <meta name="author" content="Dr Bashir Son's Traders">
+  <link rel="canonical" href="https://drbashirsonstraders.com/">
+  <meta property="og:title" content="Dr Bashir Son's Traders | Premium Poultry Medicines & Business Solutions">
+  <meta property="og:description" content="Pakistan-based poultry medicine import, distribution, and export support for professional business buyers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://drbashirsonstraders.com/">
+  <meta name="theme-color" content="#0f766e">
+  <style>
+    :root {
+      --green: #0f766e;
+      --green-dark: #0b4f4a;
+      --blue: #1d4ed8;
+      --blue-soft: #e8f1ff;
+      --mint: #ecfdf5;
+      --ink: #102027;
+      --muted: #60717a;
+      --line: #dce7e8;
+      --white: #ffffff;
+      --shadow: 0 22px 55px rgba(16, 32, 39, 0.12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f7fbfb;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      background: var(--green-dark);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 14px;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 0;
+      flex-wrap: wrap;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--green-dark);
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      font-size: 21px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.24);
+    }
+
+    .brand small {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #27434b;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button-primary {
+      color: var(--white);
+      background: var(--green);
+      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.22);
+    }
+
+    .button-primary:hover { background: var(--green-dark); }
+
+    .button-secondary {
+      color: var(--green-dark);
+      background: var(--white);
+      border-color: var(--line);
+    }
+
+    .button-secondary:hover { box-shadow: 0 12px 24px rgba(16, 32, 39, 0.1); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(110deg, rgba(8, 62, 58, 0.94), rgba(13, 91, 126, 0.84)), url("https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: var(--white);
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+      min-height: 680px;
+      padding: 76px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 650px;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-panel {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-panel h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      color: var(--green-dark);
+    }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 10px;
+      color: #314850;
+    }
+
+    .check-list li::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-top: 4px;
+      flex: 0 0 18px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, var(--white) 28%, transparent 30%), var(--green);
+    }
+
+    section { padding: 86px 0; }
+    .section-heading { max-width: 740px; margin-bottom: 34px; }
+
+    .section-heading span {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    .section-heading h2 {
+      margin: 8px 0 12px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      color: var(--green-dark);
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-card, .contact-card, .product-card, .service-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 36px rgba(16, 32, 39, 0.06);
+    }
+
+    .about-card { padding: 30px; }
+    .about-card strong { color: var(--green-dark); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      padding: 18px;
+      background: var(--mint);
+      border: 1px solid #c9f0df;
+      border-radius: var(--radius);
+    }
+
+    .stat b { display: block; font-size: 25px; color: var(--green-dark); }
+    .stat span { color: var(--muted); font-size: 13px; font-weight: 700; }
+
+    .feature-band {
+      background: linear-gradient(135deg, var(--blue-soft), var(--mint));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-grid, .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-card, .service-card { padding: 24px; }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+      border-radius: var(--radius);
+      color: var(--white);
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .product-card h3, .service-card h3, .contact-card h3 {
+      margin: 0 0 10px;
+      color: var(--green-dark);
+      font-size: 21px;
+    }
+
+    .product-card p, .service-card p, .contact-card p { margin: 0; color: var(--muted); }
+    .services { background: var(--white); }
+
+    .contact {
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.96), rgba(29, 78, 216, 0.88)), url("https://images.unsplash.com/photo-1581093458791-9d15482442f6?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: var(--white);
+    }
+
+    .contact .section-heading h2, .contact .section-heading span, .contact .section-heading p { color: var(--white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .contact-card { padding: 28px; }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: grid;
+      gap: 12px;
+      color: #314850;
+    }
+
+    .contact-list strong { color: var(--green-dark); }
+
+    .whatsapp-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 260px;
+    }
+
+    .whatsapp-card h3 { margin: 0 0 12px; font-size: 32px; line-height: 1.15; }
+    .whatsapp-card p { margin: 0 0 24px; color: rgba(255, 255, 255, 0.9); font-size: 18px; }
+
+    .whatsapp {
+      color: var(--white);
+      background: #16a34a;
+      align-self: flex-start;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .footer {
+      padding: 26px 0;
+      color: rgba(255, 255, 255, 0.86);
+      background: #082f2c;
+      font-size: 14px;
+    }
+
+    .footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .topbar .container { justify-content: center; text-align: center; }
+      .nav-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .nav-links { width: 100%; overflow-x: auto; gap: 18px; padding-bottom: 4px; }
+      .hero .container, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero .container { min-height: auto; padding: 58px 0; }
+      .product-grid, .service-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 24px, 1120px); }
+      .brand { align-items: flex-start; }
+      .brand-mark { width: 40px; height: 40px; }
+      .nav-links { font-size: 14px; }
+      .hero h1 { font-size: 43px; }
+      .hero p, .section-heading p { font-size: 17px; }
+      .hero-actions, .footer .container { flex-direction: column; }
+      .button { width: 100%; }
+      section { padding: 62px 0; }
+      .product-grid, .service-grid, .stats { grid-template-columns: 1fr; }
+      .hero-panel, .about-card, .contact-card, .whatsapp-card, .product-card, .service-card { padding: 22px; }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align:center; padding:50px;">
-  <h1>Dr Bashir Son's Traders</h1>
-  <p>Premium Poultry Medicines & Business Solutions</p>
-  <p>Pakistan | Import | Distribution | Export</p>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Pakistan | Import | Distribution | Export</span>
+      <span>Premium Poultry Medicines & Business Solutions</span>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="Dr Bashir Son's Traders home">
+        <span class="brand-mark">DB</span>
+        <span>
+          Dr Bashir Son's Traders
+          <small>Import | Distribution | Export</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="Business introduction">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Pakistan | Import | Distribution | Export</span>
+          <h1>Dr Bashir Son's Traders</h1>
+          <p>Premium poultry medicines and business solutions for farms, distributors, importers, and international buyers looking for dependable trade partners in Pakistan.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#products">View Poultry Medicines</a>
+            <a class="button button-secondary" href="#contact">Request Export Inquiry</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Company strengths">
+          <h2>Professional supply for serious poultry operations</h2>
+          <ul class="check-list">
+            <li>Focused product range for poultry health, farm care, and veterinary distribution.</li>
+            <li>Export-minded communication for overseas buyers, importers, and wholesalers.</li>
+            <li>Responsive sourcing support with practical guidance on product selection and order handling.</li>
+            <li>Business-first service built on reliability, clear dealing, and long-term partnerships.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <span>About Us</span>
+          <h2>A dependable Pakistani trading partner for poultry medicine buyers.</h2>
+          <p>Dr Bashir Son's Traders connects poultry farms, veterinary dealers, and international buyers with quality-focused poultry medicine supply and practical export support.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <p><strong>Our mission is simple:</strong> help poultry businesses source the right medicines and health products with confidence. We understand that reliable supply, clear communication, and careful order handling matter when buyers are managing active farms or distribution networks.</p>
+            <p>Based in Pakistan, our business is positioned to serve both local market needs and overseas buyers seeking trusted export relationships in poultry health and veterinary products.</p>
+          </div>
+          <div class="about-card">
+            <p>We work with a professional trading approach: product clarity, responsive inquiry handling, and buyer-friendly communication. Whether you need routine poultry medicines, dealer supply, or export coordination, our team is ready to discuss your requirements.</p>
+            <div class="stats" aria-label="Business highlights">
+              <div class="stat"><b>PK</b><span>Export Base</span></div>
+              <div class="stat"><b>B2B</b><span>Buyer Focus</span></div>
+              <div class="stat"><b>24h</b><span>Inquiry Response</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="feature-band">
+      <div class="container">
+        <div class="section-heading">
+          <span>Products</span>
+          <h2>Poultry medicines and veterinary health products.</h2>
+          <p>A focused product portfolio for poultry care, disease prevention support, farm productivity, and veterinary distribution channels.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card"><div class="icon-box">+</div><h3>Poultry Medicines</h3><p>Essential medicines and health products for poultry farms, dealers, and veterinary supply networks.</p></article>
+          <article class="product-card"><div class="icon-box">V</div><h3>Vitamins & Supplements</h3><p>Nutrition support products for flock strength, recovery, growth, and farm performance programs.</p></article>
+          <article class="product-card"><div class="icon-box">B</div><h3>Biosecurity Support</h3><p>Farm hygiene and preventive care supplies for healthier poultry operations and safer handling.</p></article>
+          <article class="product-card"><div class="icon-box">Rx</div><h3>Veterinary Range</h3><p>Trade-ready veterinary products selected for buyers who need practical, marketable stock.</p></article>
+          <article class="product-card"><div class="icon-box">EX</div><h3>Export Orders</h3><p>Product inquiry support for importers, wholesalers, and distributors sourcing from Pakistan.</p></article>
+          <article class="product-card"><div class="icon-box">QA</div><h3>Buyer Guidance</h3><p>Clear product discussions to help buyers identify suitable items for their target market.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-heading">
+          <span>Services</span>
+          <h2>Built for reliable trade, repeat orders, and long-term buyer confidence.</h2>
+          <p>From first inquiry to ongoing supply conversations, we keep communication direct, professional, and buyer-focused.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card"><div class="icon-box">01</div><h3>Product Sourcing</h3><p>Support for poultry medicine selection, availability checks, and buyer-specific product requirements.</p></article>
+          <article class="service-card"><div class="icon-box">02</div><h3>Wholesale Supply</h3><p>Business-to-business supply for farms, veterinary shops, dealers, and poultry product distributors.</p></article>
+          <article class="service-card"><div class="icon-box">03</div><h3>Export Assistance</h3><p>Professional inquiry handling for overseas buyers seeking Pakistan-based poultry medicine partners.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span>Contact</span>
+          <h2>Start a business inquiry today.</h2>
+          <p>Share your product requirement, target quantity, and destination market. Our team will respond with the next steps.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Dr Bashir Son's Traders</h3>
+            <p>Poultry medicines, veterinary products, and export trading support from Pakistan.</p>
+            <ul class="contact-list">
+              <li><strong>Location:</strong> Pakistan</li>
+              <li><strong>Business:</strong> Poultry Medicines & Veterinary Supply</li>
+              <li><strong>Buyers:</strong> Farms, Dealers, Importers, Wholesalers</li>
+              <li><strong>Email:</strong> info@drbashirsonstraders.com</li>
+              <li><strong>WhatsApp:</strong> +92 323 1603846</li>
+            </ul>
+          </div>
+
+          <div class="whatsapp-card">
+            <h3>Need product details or export pricing?</h3>
+            <p>Message us on WhatsApp with your country, required products, and estimated order quantity.</p>
+            <a class="button whatsapp" href="https://wa.me/923231603846?text=Hello%20Dr%20Bashir%20Son%27s%20Traders%2C%20I%20am%20interested%20in%20poultry%20medicines%20and%20export%20supply." target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>&copy; 2026 Dr Bashir Son's Traders. All rights reserved.</span>
+      <span>Poultry Medicines | Veterinary Products | Pakistan Export Supply</span>
+    </div>
+  </footer>
 </body>
 </html>
